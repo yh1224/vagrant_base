@@ -1,0 +1,7 @@
+---
+- hosts: default
+  sudo: true
+
+  tasks:
+    - name: set localtime
+      file: src=/usr/share/zoneinfo/Asia/Tokyo dest=/etc/localtime state=link force=yes
